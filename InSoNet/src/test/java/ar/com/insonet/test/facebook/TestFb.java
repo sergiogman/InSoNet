@@ -11,7 +11,9 @@ public class TestFb {
 	@Test
 	public void Login() throws FacebookException {
 		Facebook facebook = new FacebookFactory().getInstance();
-		facebook.getOAuthAccessToken("ss");
-		System.out.println(facebook);
+        System.out.println(facebook.getOAuthAuthorizationURL("http://localhost:8080/InSoNet"));
+        
 	}
+    
+    
 }

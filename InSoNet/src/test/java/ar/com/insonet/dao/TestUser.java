@@ -13,12 +13,12 @@ public class TestUser {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		
 		session.beginTransaction();		
-		String setUsername = "sersh";
-		String setPassword="***";
-		String setName="sergio";
-		String setSurname="man";
-		String setEmail="sergio";
-		Integer setCelular=123;
+		String setUsername = "rodo";
+		String setPassword="";
+		String setName="rodolfo";
+		String setSurname="inturias";
+		String setEmail="inturias_r@yahoo.com.ar";
+		Integer setCelular=1558905890;
 		InsonetUser user = new InsonetUser(setUsername,setPassword,setName,setSurname,setEmail,setCelular);
 
 		session.save(user);
