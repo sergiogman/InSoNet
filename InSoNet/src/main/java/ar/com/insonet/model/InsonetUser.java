@@ -3,6 +3,9 @@ package ar.com.insonet.model;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Collection;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "user")
@@ -12,6 +15,8 @@ public class InsonetUser extends User {
 	private String surname;
 	private String email;
 	private Integer celular;
+	private Collection<Sociable> socialNetwork;
+	private List<Configuration> personalConfiguration = new ArrayList<Configuration>();
 
 	public InsonetUser() {
 		super();
@@ -56,6 +61,23 @@ public class InsonetUser extends User {
 
 	public void setCelular(Integer celular) {
 		this.celular = celular;
+	}
+	
+	public List<Sociable> getSocialNetwork() {
+		List<Sociable> list = new ArrayList<>(this.socialNetwork);
+		return list;
+	}
+	
+	public void setSocialNetwork(Sociable sociable) {
+		this.socialNetwork.add(sociable);
+	}
+	
+	public List<Configuration> getPersonalConfiguration() {
+		return this.personalConfiguration;
+	}
+	
+	public void setPersonalConfiguration(Configuration configuration) {
+		this.personalConfiguration.add(configuration);
 	}
 
 }
