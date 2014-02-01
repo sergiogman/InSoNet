@@ -28,9 +28,11 @@
 		<property name="show_sql">true</property>
 
 		<!-- Drop and re-create the database schema on startup -->
-		<!--<property name="hbm2ddl.auto">create-drop</property>-->
+		<!--<property name="hbm2ddl.auto">create-drop-update</property>-->
 
  		<mapping class="ar.com.insonet.model.User"/>
- 		<mapping class="ar.com.insonet.model.InsonetUser"/> 
+ 		<mapping class="ar.com.insonet.model.InsonetUser"/>
+ 		<mapping class="ar.com.insonet.model.Sociable"/>
+ 		<mapping class="ar.com.insonet.model.Configuration"/>
 	</session-factory>
 </hibernate-configuration>

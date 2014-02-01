@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
 	<session-factory>
 
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/insonet</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+		<property name="connection.url">jdbc:mysql://localhost:3307/insonet</property>
+        <property name="connection.username">insonet</property>
+        <property name="connection.password"></property>
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
@@ -32,5 +32,7 @@
 
  		<mapping class="ar.com.insonet.model.User"/>
  		<mapping class="ar.com.insonet.model.InsonetUser"/> 
+ 		<mapping class="ar.com.insonet.model.Configuration"/>
+ 		<mapping class="ar.com.insonet.model.SociableImpl"/>
 	</session-factory>
 </hibernate-configuration>

@@ -1,7 +1,10 @@
 package ar.com.insonet.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Collection;
 import java.util.List;
@@ -15,7 +18,11 @@ public class InsonetUser extends User {
 	private String surname;
 	private String email;
 	private Integer celular;
-	private Collection<Sociable> socialNetwork;
+	
+	//@OneToMany(mappedBy="sociable")
+	@OneToMany(targetEntity = SociableImpl.class)
+	private Collection<AbstractSociable> sociable = new ArrayList<AbstractSociable>();
+	@OneToMany(targetEntity = Configuration.class)
 	private List<Configuration> personalConfiguration = new ArrayList<Configuration>();
 
 	public InsonetUser() {
@@ -63,19 +70,22 @@ public class InsonetUser extends User {
 		this.celular = celular;
 	}
 	
-	public List<Sociable> getSocialNetwork() {
-		List<Sociable> list = new ArrayList<>(this.socialNetwork);
+    
+	public List<AbstractSociable> getSociable() {
+		List<AbstractSociable> list = new ArrayList<>(this.sociable);
 		return list;
 	}
 	
-	public void setSocialNetwork(Sociable sociable) {
-		this.socialNetwork.add(sociable);
+	@OneToMany(cascade = CascadeType.ALL)
+    public void setSociable(Collection<AbstractSociable> sociable) {
+		this.sociable = sociable;
 	}
 	
 	public List<Configuration> getPersonalConfiguration() {
 		return this.personalConfiguration;
 	}
 	
+	@OneToMany(cascade = CascadeType.ALL)
 	public void setPersonalConfiguration(Configuration configuration) {
 		this.personalConfiguration.add(configuration);
 	}

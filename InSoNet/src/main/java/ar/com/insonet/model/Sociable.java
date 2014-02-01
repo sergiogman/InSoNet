@@ -1,8 +1,11 @@
 package ar.com.insonet.model;
 
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public interface Sociable {
 	
-	public boolean login();
+	/*public boolean login();
 	public boolean logout();
 	public boolean requestFriendship();
 	public boolean acceptFriendship();
@@ -12,6 +15,6 @@ public interface Sociable {
 	public boolean sendMessage();
 	public boolean receiveMessage();
 	public boolean deleteMessage();
-	public boolean markingPublication();
+	public boolean markingPublication();*/
 	
 }

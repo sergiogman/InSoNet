@@ -4,13 +4,13 @@
 	<groupId>InSoNet</groupId>
 	<artifactId>InSoNet</artifactId>
 	<packaging>war</packaging>
-	<version>1</version>
+	<version>0.1.1</version>
 	<name>InSoNet Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<!--hibernate.version>4.2.0.Final</hibernate.version -->
-		<hibernate.version>3.3.0.GA</hibernate.version>
+		<hibernate.version>3.3.0.SP1</hibernate.version>
+		<!-- hibernate.version>3.3.0.GA</hibernate.version-->
 		<mysql.connector.version>5.1.21</mysql.connector.version>
 		<spring.version>3.2.2.RELEASE</spring.version>
 		<jdk.version>1.7</jdk.version>
@@ -43,14 +43,55 @@
 
 		<!-- DB related dependencies -->
 		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>ejb3-persistence</artifactId>
+		    <version>1.0.2.GA</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-commons-annotations</artifactId>
+		  <version>3.1.0.GA</version>
+		</dependency>
+		<dependency>
+		   <groupId>org.hibernate</groupId>
+		   <artifactId>hibernate-core</artifactId>
+		   <version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-annotations</artifactId>
-			<version>3.2.1.ga</version>
+			<version>3.4.0.GA</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.2.1.ga</version>
+			<version>3.4.0.GA</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-api</artifactId>
+		  <version>1.7.5</version>
+		</dependency>
+		<dependency>
+		  <groupId>dom4j</groupId>
+		  <artifactId>dom4j</artifactId>
+		  <version>1.6.1</version>
+		</dependency>
+		<dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>1.7.5</version>
+		</dependency>
+		<dependency>
+		  <groupId>javassist</groupId>
+		  <artifactId>javassist</artifactId>
+		  <version>3.4.GA</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -71,10 +112,28 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+        <dependency>     
+	        <groupId>org.springframework</groupId>     
+	        <artifactId>spring-aop</artifactId>     
+	        <version>${spring.version}</version> 
+	    </dependency> 
+    
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-context</artifactId>
+	        <version>${spring.version}</version>
+	    </dependency>
+	    
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${spring.version}</version>
 		</dependency>
 
 		<!-- Servlet API and JSTL -->
@@ -118,11 +177,30 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
+		<!-- repository>
 			<id>spring-maven-milestone</id>
 			<name>Spring Maven Milestone Repository</name>
 			<url>http://maven.springframework.org/milestone</url>
-		</repository>
+		</repository-->
+		<!-- repository>
+            <id>JBoss-maven-releases</id>
+            <name>JBoss Repository</name>
+            <url>http://search.maven.org</url>
+        </repository-->
+		<repository>
+          <id>repository-apache-org</id>
+          <name>Apache Repository</name>
+          <url>https://repository.apache.org/content/groups/public/</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+        </repository>
 	</repositories>
 
 </project>
