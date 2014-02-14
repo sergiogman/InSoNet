@@ -2,9 +2,11 @@ package ar.com.insonet.model;
 
 import javax.persistence.MappedSuperclass;
 
+import facebook4j.Facebook;
+
 @MappedSuperclass
 public interface Sociable {
-	
+		
 	/*public boolean login();
 	public boolean logout();
 	public boolean requestFriendship();

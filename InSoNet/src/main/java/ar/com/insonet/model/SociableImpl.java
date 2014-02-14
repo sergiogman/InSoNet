@@ -7,9 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SOCIABLE_TABLE")
+@Table(name = "SOCIABLE")
 public class SociableImpl implements Sociable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Long Id;
+		
 }
