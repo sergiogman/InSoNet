@@ -1,21 +1,40 @@
 package ar.com.insonet.model;
 
+import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotNull;
+//import org.hibernate.validator.Future;
+//import org.hibernate.validator.NotNull;
 
 @Entity
-@Table(name = "access_token")
-public class AccessToken {
+@Table(name = "accesstoken")
+public class AccessToken implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private Integer id;
+	@NotNull
 	private Long userId;
+	@NotNull
 	private Long socialNetworkId;
+	@NotNull
 	private String accessToken;
-	private Long expire;
+	@NotNull
+	@Temporal(javax.persistence.TemporalType.DATE)
+    @Future
+	private Date expire;
 	
+	public AccessToken() {
+		
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -40,10 +59,10 @@ public class AccessToken {
 	public void setAccessToken(String accessToken) {
 		this.accessToken = accessToken;
 	}
-	public Long getExpire() {
+	public Date getExpire() {
 		return expire;
 	}
-	public void setExpire(Long expire) {
+	public void setExpire(Date expire) {
 		this.expire = expire;
 	}
 	

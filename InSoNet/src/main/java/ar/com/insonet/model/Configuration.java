@@ -4,22 +4,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+//import org.hibernate.validator.NotNull;
 
 @Entity
 @Table(name="configuration")
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Configuration {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Long Id;
-	private String parameter;
+	@NotNull
 	private int userInsonetId;
+	@NotNull
+	private String parameter;
+	@NotNull
 	private String value;
 	
+	public Configuration() {
+		
+	}
 	public String getParameter() {
 		return this.parameter;
 	}
