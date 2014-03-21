@@ -4,7 +4,7 @@
 	<groupId>InSoNet</groupId>
 	<artifactId>InSoNet</artifactId>
 	<packaging>war</packaging>
-	<version>0.1.1</version>
+	<version>0.2.0</version>
 	<name>InSoNet Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 

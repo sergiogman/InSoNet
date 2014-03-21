@@ -1,0 +1,16 @@
+<beans>
+    <bean id='beanNameUrl' class='org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'/>
+    
+    <bean name='/showAllSocialNetworks.jsp'
+    class='ar.com.insonet.controller.ShowAllSocialNetworksController'>
+    </bean>
+
+    <bean name='/.jsp'
+    class='com.javabeat.net.ComposeMailController'>
+    </bean>
+
+    <bean name='/ deleteMail.jsp'
+    class='com.javabeat.net.DeleteMailController'>
+    </bean>
+    
+</beans>
