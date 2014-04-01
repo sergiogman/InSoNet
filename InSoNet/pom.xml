@@ -41,21 +41,21 @@
 			<version>1.1</version>
 		</dependency>
 		<dependency>
-<groupId>net.riccardocossu.autodoc</groupId>
-<artifactId>autodoc-base</artifactId>
-<version>0.3.0</version>
-</dependency>
+            <groupId>net.riccardocossu.autodoc</groupId>
+            <artifactId>autodoc-base</artifactId>
+            <version>0.3.0</version>
+        </dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
 		</dependency>
-		<dependency>
+		<!-- dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8.8</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>org.jboss.logging</groupId>
 			<artifactId>jboss-logging</artifactId>
@@ -109,14 +109,14 @@
 		</dependency>
 		
 		<dependency>
-		  <groupId>org.slf4j</groupId>
-		  <artifactId>slf4j-api</artifactId>
-		  <version>1.7.5</version>
+            <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.5</version>
 		</dependency>
 		<dependency>
-		  <groupId>dom4j</groupId>
-		  <artifactId>dom4j</artifactId>
-		  <version>1.6.1</version>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
 		</dependency>
 		<dependency>
             <groupId>log4j</groupId>
@@ -129,9 +129,9 @@
 		    <version>1.7.5</version>
 		</dependency>
 		<dependency>
-		  <groupId>javassist</groupId>
-		  <artifactId>javassist</artifactId>
-		  <version>3.4.GA</version>
+		    <groupId>javassist</groupId>
+		    <artifactId>javassist</artifactId>
+		    <version>3.4.GA</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
