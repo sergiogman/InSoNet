@@ -18,45 +18,7 @@
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>mvc-dispatcher</servlet-name>
-        <url-pattern>/resources/jsp/css/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>mvc-dispatcher</servlet-name>
-        <url-pattern>/jsp/js/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>mvc-dispatcher</servlet-name>
-        <url-pattern>/jsp/images/*</url-pattern>
-    </servlet-mapping>
-    <!-- servlet>
-        <servlet-name>signin</servlet-name>
-        <servlet-class>ar.com.insonet.facebook.SignInServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>signin</servlet-name>
-        <url-pattern>/signin</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>callback</servlet-name>
-        <servlet-class>ar.com.insonet.facebook.CallbackServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>callback</servlet-name>
-        <url-pattern>/callback</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>logout</servlet-name>
-        <servlet-class>ar.com.insonet.facebook.LogoutServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>logout</servlet-name>
-        <url-pattern>/logout</url-pattern>
-    </servlet-mapping-->
-
+    
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
