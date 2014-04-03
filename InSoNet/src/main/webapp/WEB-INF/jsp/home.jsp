@@ -7,19 +7,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/holder.js"></script>
+    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet" type="text/css" />
+    <script src="<c:url value='/resources/js/holder.js' />"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.js"></script>
+    <script src="<c:url value='/resources/js/jquery.js'/>"></script>
     <!-- conditional comments -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
+      <script src="<c:url value='/resources/js/html5shiv.js'/>"></script>
+      <script src="<c:url value='/resources/js/respond.min.js'/>"></script>
     <![endif]-->
     <!--[if IE 9]>
-        <script type='text/javascript' src='js/jquery.html5-placeholder-shim.js'></script>
+        <script type='text/javascript' src='<c:url value="/resources/js/jquery.html5-placeholder-shim.js"/>'></script>
     <![endif]-->
     <title>Insert title here</title>
 </head>
@@ -28,7 +28,7 @@
     <div class="row">
         <nav class="navbar navbar-default" role="navigation">
             <div class="col-lg-6">
-                <img src="images/insonet_logo.png" class="img-responsive" alt="InSoNet" title="InSoNet">
+                <img src="<c:url value='/resources/images/insonet_logo.png'/> " class="img-responsive" alt="InSoNet" title="InSoNet">
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-6">
                 
@@ -72,7 +72,7 @@
 </div>    
     
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="<c:url value='/resources/js/bootstrap.min.js'/>"></script>
 
 </body>
 </html>
