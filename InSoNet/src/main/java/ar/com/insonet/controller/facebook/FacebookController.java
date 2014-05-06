@@ -44,7 +44,7 @@ public class FacebookController {
         //return mav;
 	}
 	
-	@RequestMapping("/callback")
+	@RequestMapping(value="/callback", params="code")
 	public void callbackHandler(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 
